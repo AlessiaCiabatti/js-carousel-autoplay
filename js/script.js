@@ -70,8 +70,6 @@ sopra.addEventListener('click', function(){
   fotoCollection[counterImg].classList.remove('hide');
 })
 
-
-
 const slideAutomatico = setInterval(() =>{
     // quando clicco la freccia aggiungo hide all'incremento
   fotoCollection[counterImg++].classList.add('hide');
@@ -87,6 +85,12 @@ const slideAutomatico = setInterval(() =>{
 
 slider.addEventListener('mouseover', () =>{
   clearInterval(slideAutomatico);
+  console.log('sto entrando')
+})
+
+slider.addEventListener('mouseout', () =>{
+  setInterval(slideAutomatico);
+  console.log('sto uscendo')
 })
 
 // if(slider.onmouseenter){

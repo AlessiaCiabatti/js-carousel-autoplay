@@ -37,3 +37,4 @@ Attenzione: dopo l’ultima slide deve riapparire la prima e così via
 
 2. quando con mouse vado sopra tutto o slider, il setInterval di 3 secondi non deve più entrare in funzione
   - se il mouse è sopra lo slide, setInterval si blocca
+  - quando tolgo il mouse deve ripartire lo slide automatico
