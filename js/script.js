@@ -70,7 +70,7 @@ sopra.addEventListener('click', function(){
   fotoCollection[counterImg].classList.remove('hide');
 })
 
-const slideAutomatico = setInterval(() =>{
+let slideAutomatico = setInterval(() =>{
     // quando clicco la freccia aggiungo hide all'incremento
   fotoCollection[counterImg++].classList.add('hide');
   
@@ -88,8 +88,20 @@ slider.addEventListener('mouseover', () =>{
   console.log('sto entrando')
 })
 
+// quando voglio far riaprtire nuovamente il timer devo ricopiare tutto slideAutomatico, quindi quando il cursore si sposta fuori, devo ridare tutte le opzioni che ho dato per far muovere le immagini
 slider.addEventListener('mouseout', () =>{
-  setInterval(slideAutomatico);
+  slideAutomatico = setInterval(() =>{
+    // quando clicco la freccia aggiungo hide all'incremento
+  fotoCollection[counterImg++].classList.add('hide');
+  
+  // se il contatore è maggiore o uguale alla lunghezza delle immagini, ritorna a 0
+  if(counterImg >= fotoCollection.length){
+    counterImg = 0;
+  }
+
+  // img corrente
+  fotoCollection[counterImg].classList.remove('hide');
+},3000)
   console.log('sto uscendo')
 })
 
