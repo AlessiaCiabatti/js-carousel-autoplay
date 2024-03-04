@@ -1,3 +1,4 @@
+const slider = document.querySelector('.slider');
 // richiamo container di tutte le img: all-img
 const allImg = document.querySelector('.all-images');
 // adesso nel for concateno allImg += 
@@ -69,6 +70,8 @@ sopra.addEventListener('click', function(){
   fotoCollection[counterImg].classList.remove('hide');
 })
 
+
+
 const slideAutomatico = setInterval(() =>{
     // quando clicco la freccia aggiungo hide all'incremento
   fotoCollection[counterImg++].classList.add('hide');
@@ -81,6 +84,14 @@ const slideAutomatico = setInterval(() =>{
   // img corrente
   fotoCollection[counterImg].classList.remove('hide');
 },3000)
+
+slider.addEventListener('mouseover', () =>{
+  clearInterval(slideAutomatico);
+})
+
+// if(slider.onmouseenter){
+//   console.log('hover');
+// }
 
 
 // Bottone “Incremento” (sotto):
