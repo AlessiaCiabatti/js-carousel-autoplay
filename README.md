@@ -33,4 +33,7 @@ Attenzione: dopo l’ultima slide deve riapparire la prima e così via
 
 ## SVOLGIMENTO
 1. devo realizzare un setInterval di 3 secondi, il quale faccia alternare automaticamente le foto
-  - all'interno di setInterval devo spostare le funzioni che permettono lo slide delle foto
+  - all'interno di setInterval devo copiare ed incollare le funzioni che permettono lo slide delle foto
+
+2. quando con mouse vado sopra tutto o slider, il setInterval di 3 secondi non deve più entrare in funzione
+  - se il mouse è sopra lo slide, setInterval si blocca
